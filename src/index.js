@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <RecoilRoot>
         <BrowserRouter>
-            <QueryClientProvider queryClient={queryClient}>
+            <QueryClientProvider client={queryClient}>
                 <App />
             </QueryClientProvider>
         </BrowserRouter>
