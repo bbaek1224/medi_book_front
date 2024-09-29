@@ -1,23 +1,19 @@
 import { Global } from "@emotion/react";
 import { reset } from "./style/common";
-import MainLayout from "./components/MainLayout/MainLayout";
 import { Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import StartPage from "./pages/StartPage/StartPage";
-import HomePage from "./pages/HomePage/HomePage";
-
+import HomePage from "./pages/userPage/HomePage/HomePage";
+import UserMainLayout from "./components/usercomponents/UserMainLayout/UserMainLayout";
 
 function App() {
     return (
         <>
             <Global styles={reset} />
-            <MainLayout>
+            {/* user */}
+            <UserMainLayout>
                 <Routes>
-                    <Route path="/" element={ <StartPage /> } />
-                    <Route path="/home" element={ <HomePage /> } />
-                    <Route path="/login" element={ <LoginPage /> } />
+                    <Route path="/*" element={<HomePage />}/>
                 </Routes>
-            </MainLayout>
+            </UserMainLayout>
         </>
     );
 }

@@ -2,12 +2,12 @@ import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
 
-function LoginPage(props) {
+function PageAniLayout({ isShow, children}) {
     return (
-        <div css={s.layout}>
-            
+        <div css={s.layout(isShow)}>
+            {children}
         </div>
     );
 }
 
-export default LoginPage;
+export default PageAniLayout;
