@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
-import UserSubContainer from '../../../components/usercomponents/UserSubContainer/UserSubContainer';
 import PageAniLayout from '../../../components/usercomponents/PageAniLayout/PageAniLayout';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import ReservationPage from '../ReservationPage/ReservationPage';
@@ -9,6 +8,7 @@ import { IoIosAdd } from "react-icons/io";
 import ReservationListPage from '../ReservationListPage/ReservationListPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import SettingsPage from '../SettingsPage/SettingsPage';
+import SubContainer from '../../../components/usercomponents/SubContainer/SubContainer';
 
 function DashBoard(props) {
     const nav = useNavigate();
@@ -33,7 +33,7 @@ function DashBoard(props) {
 
     return (
         <PageAniLayout isShow={isShow}>
-            <UserSubContainer>
+            <SubContainer>
                 <div css={s.layout}>
                     <div css={s.header}>
                         <div>
@@ -45,7 +45,7 @@ function DashBoard(props) {
                     </div>
                     <div css={s.body}>
                         <div css={s.detailBox}>
-                            <IoIosAdd />
+                            <IoIosAdd onClick={handleReservationListOnClick}/>
                         </div>
                         <div css={s.reservationBox}>
                             오늘 예약 중에 가장 가까운 것 출력 상단의 +버튼을 통해 예약 리스트로 이동 가능
@@ -64,7 +64,7 @@ function DashBoard(props) {
                     <Route path='/review' element={<ReviewPage />} />
                     <Route path='/settings' element={<SettingsPage />} />
                 </Routes>
-            </UserSubContainer>
+            </SubContainer>
         </PageAniLayout>
     );
 }

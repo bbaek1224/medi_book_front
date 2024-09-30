@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 import * as s from "./style";
 import BackButton from '../../../components/usercomponents/BackButton/BackButton';
 import PageAniLayout from '../../../components/usercomponents/PageAniLayout/PageAniLayout';
-import UserSubContainer from '../../../components/usercomponents/UserSubContainer/UserSubContainer';
+import SubContainer from '../../../components/usercomponents/SubContainer/SubContainer';
 
 function ReviewPage(props) {
     const [ isShow, setShow ] = useState(true);
 
     return (
         <PageAniLayout isShow={isShow}> 
-            <UserSubContainer>
+            <SubContainer>
                 <div css={s.layout}>
                     <BackButton setShow={setShow} />
                     <div css={s.container}>
                         ReviewPage
                     </div>
                 </div>
-            </UserSubContainer>
+            </SubContainer>
         </PageAniLayout>
     );
 }

@@ -4,6 +4,7 @@ export const reset = css`
     @font-face {
         font-family: 'Freesentation-9Black';
         src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+        font-size: 16px;
         font-weight: 900;
         font-style: normal;
     }

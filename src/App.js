@@ -2,18 +2,16 @@ import { Global } from "@emotion/react";
 import { reset } from "./style/common";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/userPage/HomePage/HomePage";
-import UserMainLayout from "./components/usercomponents/UserMainLayout/UserMainLayout";
+import AdminDashBoard from "./pages/adminPage/AdminDashBoard/AdminDashBoard";
 
 function App() {
     return (
         <>
             <Global styles={reset} />
-            {/* user */}
-            <UserMainLayout>
-                <Routes>
-                    <Route path="/*" element={<HomePage />}/>
-                </Routes>
-            </UserMainLayout>
+            <Routes>
+                <Route path="/*" element={<HomePage />} />
+                <Route path='/admin/*' element={<AdminDashBoard />} />
+            </Routes>
         </>
     );
 }

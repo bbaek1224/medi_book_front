@@ -5,7 +5,7 @@ import Signin from '../modal/Signin/Signin';
 import Signup from '../modal/Signup/Signup';
 import AdminSignin from '../modal/AdminSignin/AdminSignin';
 
-function UserMainContainer({ children }) {
+function MainContainer({ children }) {
     const [ signupModalElement, setSignupModalElement ] = useState(<></>);
     const [ signinModalElement, setSigninModalElement ] = useState(<></>);
     const [ adminSigninModalElement, setAdminSigninModalElement ] = useState(<></>);
@@ -30,4 +30,4 @@ function UserMainContainer({ children }) {
     );
 }
 
-export default UserMainContainer;
+export default MainContainer;
