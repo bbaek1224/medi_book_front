@@ -4,7 +4,7 @@ import * as s from "./style";
 import { IoCellularSharp } from "react-icons/io5";
 import { IoIosWifi, IoIosBatteryFull } from "react-icons/io";
 
-function UserMainLayout({ children }) {
+function MainLayout({ children }) {
     const [ clock, setClock ] = useState("0:00");
 
     useEffect(() => {
@@ -30,4 +30,4 @@ function UserMainLayout({ children }) {
     );
 }
 
-export default UserMainLayout;
+export default MainLayout;

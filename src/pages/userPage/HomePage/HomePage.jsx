@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import * as s from "./style";
 import { RiHome2Line } from "react-icons/ri";
 import LoadingPage from '../../../components/usercomponents/Loading/LoadingPage';
-import UserMainContainer from '../../../components/usercomponents/UserMainContainer/UserMainContainer';
 import { useSetRecoilState } from 'recoil';
 import { adminSigninModalAtom, signinModalAtom, signupModalAtom } from '../../../atoms/modalAtoms';
-import { redirect, replace, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import DashBoard from '../DashBoard/DashBoard';
-import UserMainLayout from '../../../components/usercomponents/UserMainLayout/UserMainLayout';
+import MainContainer from '../../../components/usercomponents/MainContainer/MainContainer';
+import AdminDashBoard from '../../adminPage/AdminDashBoard/AdminDashBoard';
+import MainLayout from '../../../components/usercomponents/MainLayout/MainLayout';
 
 function HomePage(props) {
     const nav = useNavigate();
@@ -35,11 +36,13 @@ function HomePage(props) {
     }
 
     const handleAdminSigninModalOnClick = () => {
-        setAdminSigninModalState(true)
+        // setAdminSigninModalState(true)
+        nav("/admin/*", { replace: true })
     }
 
     return (
-        <UserMainContainer>
+        <MainLayout>
+        <MainContainer>
             {
                 isLoading ? <LoadingPage /> :
                     <div css={s.layout}>
@@ -74,7 +77,8 @@ function HomePage(props) {
             <Routes>
                 <Route path='/dashboard/*' element={<DashBoard />}/>
             </Routes>
-        </UserMainContainer>
+        </MainContainer>
+        </MainLayout>
     );
 }
 

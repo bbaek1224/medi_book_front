@@ -2,7 +2,7 @@ import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
 
-function UserSubContainer({ children }) {
+function SubContainer({ children }) {
     return (
         <div css={s.layout}>
             {children}
@@ -10,4 +10,4 @@ function UserSubContainer({ children }) {
     );
 }
 
-export default UserSubContainer;
+export default SubContainer;

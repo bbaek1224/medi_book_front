@@ -62,9 +62,9 @@ export const footer = css`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding-bottom: 10px;
     width: 100%;
-    height: 250px;
+    height: 200px;
 
     & button {
         box-sizing: border-box;
@@ -77,5 +77,13 @@ export const footer = css`
         height: 49%;
         font-size: 25px;
         cursor: pointer;
+    }
+
+    & button:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+
+    & button:nth-of-type(2) {
+        margin-bottom: 10px;
     }
 `;
