@@ -1,19 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
-import { useNavigate } from 'react-router-dom';
 
-function StartPage(props) {
-    const navigate = useNavigate();
-    const [ loading, setLoading ] = useState(true);
-
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setLoading(false);
-    //         navigate("/login");
-    //     }, 5000);
-    // }, [])
-
+function LoadingPage(props) {
     return (
         <div css={s.layout}>
             <div css={s.titleContainer}>
@@ -29,4 +18,4 @@ function StartPage(props) {
     );
 }
 
-export default StartPage;
+export default LoadingPage;

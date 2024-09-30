@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
+import { IoCellularSharp } from "react-icons/io5";
+import { IoIosWifi, IoIosBatteryFull } from "react-icons/io";
 
-function MainLayout({ children }) {
+function UserMainLayout({ children }) {
     const [ clock, setClock ] = useState("0:00");
 
     useEffect(() => {
@@ -20,7 +22,7 @@ function MainLayout({ children }) {
                 <div css={s.topBar}>
                     <div css={s.clock}>{clock}</div>
                     <div css={s.topBarCenter}></div>
-                    <div css={s.rightItems}></div>
+                    <div css={s.rightItems}><IoCellularSharp /><IoIosWifi /><IoIosBatteryFull /></div>
                 </div>
                 {children}
             </div>
@@ -28,4 +30,4 @@ function MainLayout({ children }) {
     );
 }
 
-export default MainLayout;
+export default UserMainLayout;
